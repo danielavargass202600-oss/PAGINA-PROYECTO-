@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Alma &amp; Sabor | Cocina cruceña</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="hero" id="inicio">
+		<div class="hero-contenido">
+			<p class="eyebrow">COCINA DE TIERRA CALIENTE</p>
+			<h1>Alma <span>&amp;</span> Sabor</h1>
+			<p class="hero-subtitulo">Recetas que cuentan la historia de Santa Cruz y Camiri.</p>
+			<a class="boton boton-claro" href="#recetas">Explorar recetas <span>↓</span></a>
+		</div>
+		<div class="hero-nota"><span class="hero-nota-numero">05</span><span>sabores para<br>compartir</span></div>
+	</header>
+	<nav aria-label="Navegación principal">
+		<a class="marca" href="#inicio">A<span>&amp;</span>S</a>
+		<div class="nav-enlaces"><a href="#recetas">Recetas</a><a href="#historia">Historia</a><a href="#galeria">Galería</a><a href="#favoritos">Favoritos <span class="contador" id="contadorFavoritos">0</span></a></div>
+	</nav>
+	<main>
+		<section class="intro"><div><p class="eyebrow">MESA ABIERTA</p><h2>Una región, <em>muchas formas</em> de celebrar.</h2></div><p class="intro-text">Conoce los platos que pasan de generación en generación: ingredientes sencillos, fuego lento y ese toque de casa que no se puede copiar.</p></section>
+		<section id="recetas">
+			<div class="seccion-cabecera"><div><p class="eyebrow">ELIGE TU PRÓXIMO ANTOJO</p><h2>Recetas con raíz</h2></div><div class="buscador"><label for="buscador">Buscar en el recetario</label><input type="search" id="buscador" placeholder="Ej. majadito" oninput="buscarPlato()"></div></div>
+			<div class="contenedor-platos">
+				<article class="plato" data-nombre="patasca"><img src="patasca.jpg" alt="Patasca"><h3>Patasca</h3><p>Comida tradicional muy conocida en diferentes regiones de Bolivia.</p><p class="historia-plato"><strong>Su historia:</strong> plato de celebración preparado lentamente para reunir a la familia.</p><h4>Ingredientes</h4><ul><li>Maíz</li><li>Carne</li><li>Cebolla</li><li>Ajo</li></ul><button class="favorito-boton" onclick="agregarFavorito('Patasca')">♡ <span>Guardar receta</span></button></article>
+				<article class="plato" data-nombre="majadito"><img src="majadito.jpg" alt="Majadito"><h3>Majadito</h3><p>Uno de los platos tradicionales más representativos de Santa Cruz.</p><p class="historia-plato"><strong>Su historia:</strong> receta cruceña de aprovechamiento hecha con arroz y carne.</p><h4>Ingredientes</h4><ul><li>Arroz</li><li>Carne</li><li>Plátano</li><li>Huevo</li></ul><button class="favorito-boton" onclick="agregarFavorito('Majadito')">♡ <span>Guardar receta</span></button></article>
+				<article class="plato" data-nombre="picana"><img src="picana.jpg" alt="Picana"><h3>Picana</h3><p>Plato tradicional que suele prepararse especialmente en fechas importantes.</p><p class="historia-plato"><strong>Su historia:</strong> caldo festivo boliviano para compartir en Navidad y reuniones familiares.</p><h4>Ingredientes</h4><ul><li>Carne</li><li>Papa</li><li>Maíz</li><li>Zanahoria</li></ul><button class="favorito-boton" onclick="agregarFavorito('Picana')">♡ <span>Guardar receta</span></button></article>
+				<article class="plato" data-nombre="locro"><img src="locro.jpg" alt="Locro"><h3>Locro</h3><p>Preparación tradicional que forma parte de la gastronomía boliviana.</p><p class="historia-plato"><strong>Su historia:</strong> receta de raíces indígenas hecha con maíz, zapallo y papa.</p><h4>Ingredientes</h4><ul><li>Maíz</li><li>Carne</li><li>Zapallo</li><li>Papa</li></ul><button class="favorito-boton" onclick="agregarFavorito('Locro')">♡ <span>Guardar receta</span></button></article>
+				<article class="plato" data-nombre="sonso"><img src="sonso.jpg" alt="Sonso de yuca"><h3>Sonso de Yuca</h3><p>Comida tradicional de Santa Cruz preparada principalmente con yuca.</p><p class="historia-plato"><strong>Su historia:</strong> clásico del oriente boliviano, nacido de la combinación de yuca y queso.</p><h4>Ingredientes</h4><ul><li>Yuca</li><li>Queso</li><li>Sal</li><li>Mantequilla</li></ul><button class="favorito-boton" onclick="agregarFavorito('Sonso de Yuca')">♡ <span>Guardar receta</span></button></article>
+			</div>
+		</section>
+		<section id="historia" class="historia"><div><p class="eyebrow">DETRÁS DEL PLATO</p><h2>El sabor también<br><em>es memoria.</em></h2></div><div class="historia-texto"><p>La gastronomía de Santa Cruz y Camiri forma parte de la identidad cultural de nuestra región y de sus celebraciones familiares.</p><p>Muchos platos utilizan productos propios como la yuca, el maíz, el arroz, el plátano y diferentes tipos de carne.</p><p>Conservar estas recetas permite que las nuevas generaciones conozcan y valoren nuestra cultura.</p></div></section>
+		<section id="galeria"><div class="seccion-cabecera"><div><p class="eyebrow">A PRIMERA VISTA</p><h2>Un banquete de color</h2></div></div><div class="galeria"><div><img src="patasca.jpg" alt="Patasca"><p>Patasca</p></div><div><img src="majadito.jpg" alt="Majadito"><p>Majadito</p></div><div><img src="picana.jpg" alt="Picana"><p>Picana</p></div><div><img src="locro.jpg" alt="Locro"><p>Locro</p></div><div><img src="sonso.jpg" alt="Sonso de yuca"><p>Sonso de Yuca</p></div></div></section>
+		<section id="favoritos" class="favoritos"><p class="eyebrow">TU RECETARIO PERSONAL</p><h2>Lo que quieres volver a probar</h2><div id="listaFavoritos"><p>Aún no tienes platos favoritos.</p></div></section>
+	</main>
+	<footer><p class="marca-footer">Alma <span>&amp;</span> Sabor</p><p>Recetas con raíz desde Santa Cruz y Camiri · © 2026</p></footer>
+	<script src="funciones.js"></script>
+</body>
+</html>
